@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const authSchema = require('./users.model');
+const authSchema = require('../models/users.model');
 
 authSchema.statics = {
   create: function (data, cb) {
@@ -11,5 +11,5 @@ authSchema.statics = {
   }
 }
 
-const authModel = mongoose.model('Users', authSchema);
+const authModel = mongoose.model('Usuarios', authSchema);
 module.exports = authModel;

@@ -1,7 +1,8 @@
-const mongoose = require('mongoose');
+const mongoose = require ('mongoose');
 const Schema = mongoose.Schema;
 mongoose.set('useCreateIndex', true);
-const userSchema = new Schema({
+
+const UserSchema = new Schema({
   name: {
     type: String,
     required: true,
@@ -18,8 +19,8 @@ const userSchema = new Schema({
     required: true,
     trim: true
   }
-}, {
-    timestamps: true
-  });
+},{
+  timestamps: true
+});
 
-module.exports = userSchema;
+module.exports = UserSchema;  // mongoose.model('Usuarios', UserSchema);
